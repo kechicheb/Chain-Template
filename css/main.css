@@ -1,0 +1,75 @@
+/* Start Variables  */
+:root {
+    --mainColor: #4b8ef1;
+    --SecondaryColor: #2a2a2a;
+    --secondary-alt: #afafaf;
+    --mainTransition: .3s;
+    --mainPadding-top: 5rem;
+    --mainPadding-bottom: 5rem;
+  }
+  /* End Variables  */
+
+/* Start Global Rules  */
+
+
+* {
+  font-family: 'Raleway', sans-serif;
+  -webkit-box-sizing: border-box;
+box-sizing: border-box;
+  text-decoration: none;
+  outline: none;
+  border: none;
+  
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+.container {
+    padding-left:15px;
+    padding-right: 15px;
+    margin-left:auto;
+    margin-right: auto;
+}
+/* Small */
+@media (min-width: 786px) {
+  .container {
+    width: 750px;
+  }
+}
+/* Medium */
+@media (min-width: 992px) {
+  .container {
+    width: 970px;
+  }
+}
+
+/* Large */
+@media (min-width: 1200px) {
+  .container {
+    width: 1170px;
+  }
+}
+
+::-webkit-scrollbar {
+    width: 8px; /* vertical */
+    height: 8px; /* horizontal */
+  }
+
+  ::-webkit-scrollbar-track {
+    background: #000;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background:var(--main-color);
+    border-radius: 100vw;
+  }
+
+  
