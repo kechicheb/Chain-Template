@@ -93,6 +93,7 @@ html {
  } 
   header .container {
     display: flex;
+    left: 0;
   justify-content: space-between;
   align-items: center;
   position: relative;
@@ -149,7 +150,7 @@ header .container .links ul li:last-child a svg {
     right: 0;
     gap: 0;
     flex-direction: column;
-    background-color: rgba(214, 214, 214, 0.61);
+    background-color: rgba(214, 214, 214);
     opacity: 0;
     
 }
@@ -181,3 +182,82 @@ header .container .links ul li:last-child {
 
 }
   /* End Header */
+
+  /* Start Landing */
+    section.landing {
+      position: relative;
+     top: -72px;
+      height: 100vh;
+      
+    }
+    section.landing::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-image: url(../images/slider-left-dec.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    z-index: -1;
+}
+    section.landing .container {
+      display: grid;
+      align-items: center;
+      gap: 40px;
+      height: 100%;
+      grid-template-columns: 1fr 1fr;
+      
+     
+}
+
+    section.landing .container .left .text {
+      max-width: 400px;
+      
+    }
+    section.landing .container .left .text h1 {
+      font-size: 2rem;
+    }
+    section.landing .container .left .text p {
+      line-height: 2;
+      margin-bottom: 20px;
+    }
+    section.landing .container .left .buttons a:first-child {
+    margin-right: 20px;
+    }
+    section.landing .container .left .buttons a {
+      background-color: var(--main-color);
+      color: white;
+      padding: 10px 15px;
+      border-radius: 50px;
+      -webkit-border-radius: 50px;
+      -moz-border-radius: 50px;
+      -ms-border-radius: 50px;
+      -o-border-radius: 50px;
+}
+    section.landing .container .right img {
+      max-width: 100%;
+    }
+    
+    @media (max-width:991px) {
+      section.landing .container {
+        place-items: center;
+        padding-top: 72px;
+        grid-template-columns: 1fr;
+     
+      }
+      section.landing .container .left {
+        text-align: center;
+      }
+      section.landing .container .left .text {
+        margin: 0 auto;
+        width: 100%;
+      }
+      section.landing .container .right img {
+        max-width:500px ;
+      }
+    
+      
+    }
+  /* End Landing */
