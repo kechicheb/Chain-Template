@@ -1,6 +1,6 @@
 function show() {
  
-    const links = document.querySelector("#bar") ;
+    const links = document.querySelector("#ba-r") ;
     links.classList.toggle("active");
 
 }
