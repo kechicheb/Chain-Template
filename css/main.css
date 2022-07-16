@@ -599,3 +599,156 @@ display: block;
   font-weight: 500;
 }
   /* End Testimonials */
+
+  /* Start Pricing */
+
+  section.pricing {
+    padding-top: var(--main-padding-top);
+    padding-bottom: var(--main-padding-bottom);
+  }
+
+  section.pricing .container .content {
+    padding-top: 80px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill,minmax(300px,1fr));
+    gap:30px; 
+  }
+  section.pricing .container .content .box  {
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    height: fit-content;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    padding:30px 30px 0px;
+    border-radius: 50px;
+    -webkit-border-radius: 50px;
+    -moz-border-radius: 50px;
+    -ms-border-radius: 50px;
+    -o-border-radius: 50px;
+}
+section.pricing .container .content .box::after,
+section.pricing .container .content .box::before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  left: 0;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+section.pricing .container .content .box::after {
+  bottom: 0;
+  width: 100%;
+  height: 201px;
+  background-image: url("../images/pro-table-bottom.png");
+}
+section.pricing .container .content .box::before {
+  top: 0px;
+  width: 281px;
+  height: 251px;
+  background-image: url("../images/pro-table-top.png");
+ 
+}
+section.pricing .container .content .box:not(:nth-child(2)):before,
+section.pricing .container .content .box:not(:nth-child(2)):after  {
+  opacity: 0.5;
+}
+  section.pricing .container .content .box:nth-child(2) {
+    transform: translateY(-40px);
+    -webkit-transform: translateY(-40px);
+    -moz-transform: translateY(-40px);
+    -ms-transform: translateY(-40px);
+    -o-transform: translateY(-40px);
+}
+  section.pricing .container .content .box .button {
+    margin-bottom: 100px;
+  }
+  section.pricing .container .content .box:nth-child(2) .button {
+    margin-bottom: 130px;
+  }
+  
+  
+section.pricing .container .content .box  span.price {
+  align-self: flex-start;
+  font-size: 2.3rem;
+  font-weight: 500;
+  color: white;
+}
+section.pricing .container .content .box  span.price + h3 {
+  margin-block:10px 40px;
+}
+section.pricing .container .content .box:nth-child(2)  span.price + h3 {
+  margin-block: 50px 40px;
+}
+  section.pricing .container .content .box  img {
+    width: 120px;
+    height: 106px;
+  }
+  section.pricing .container .content .box ul {
+    margin-top: 30px;
+    margin-bottom:50px ;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    align-items: center;
+  }
+  section.pricing .container .content .box ul li {
+    font-size: 15px;
+  }
+  section.pricing .container .content .box:first-child ul li:first-child,
+  section.pricing .container .content .box:first-child ul li:nth-child(2){
+   color: var(--main-color);
+  }
+  section.pricing .container .content .box:nth-child(2) ul li:not(:last-child,:nth-child(5)) {
+    color: var(--main-color);
+   }
+  section.pricing .container .content .box:last-child ul li {
+   color: var(--main-color);
+  }
+  section.pricing .container .content .box:first-child ul li:not(:first-child,:nth-child(2)),
+  section.pricing .container .content .box:nth-child(2) ul li:last-child,
+  section.pricing .container .content .box:nth-child(2) ul li:nth-child(5){
+   color: var(--secondary-alt);
+   text-decoration:line-through;
+  }
+  section.pricing .container .content .box .button a {
+    color: var(--main-color);
+    font-weight: 500;
+    font-size: 15px;
+    border: 1px solid var(--main-color);
+    padding: 10px 20px;
+    border-radius: 50px;
+    -webkit-border-radius: 50px;
+    -moz-border-radius: 50px;
+    -ms-border-radius: 50px;
+    -o-border-radius: 50px;
+  }
+  section.pricing .container .content .box .button a:hover {
+    color: white;
+    background-color: var(--main-color);
+  }
+
+
+  /* responsive */
+
+  @media (max-width:991px) {
+    section.pricing .container .content .box:nth-child(2) .button {
+      margin-bottom: 100px;
+    }
+    section.pricing .container .content .box:nth-child(2) {
+      transform: translateY(0);
+      -webkit-transform: translateY(0);
+      -moz-transform: translateY(0);
+      -ms-transform: translateY(0);
+      -o-transform: translateY(0);
+    }
+    section.pricing .container .content .box:nth-child(2)  span + h2 {
+      margin-block: 10px 40px;
+    }
+    
+  }
+
+
+  /* End Pricing */
